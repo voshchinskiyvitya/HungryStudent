@@ -39,6 +39,16 @@ $RECYCLE.BIN/
 .Trashes
 .VolumeIcon.icns
 
+# Node modules
+/node_modules
+
+# WebStorm project dir
+/.idea
+
+# Compiled files
+/compiled
+/site
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop

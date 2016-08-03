@@ -1,0 +1,44 @@
+.body{
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    width: auto;
+    background-color: cornflowerblue;
+}
+.filter-panel{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: darkgray;
+}
+.content{
+    margin-top: 160px;
+    margin-left: 200px;
+}
+.Recipe{
+    border: solid cadetblue;
+    border-color: aquamarine;
+    border-width: 3px;
+    background-color: beige;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.Recipe .img{
+    height: 140px;
+    width: 140px;
+    border-radius: 100%;
+    border: 2px solid #50fa40;
+    background-size: 140px auto; <!-- choose heigth if more then width -->
+    background-repeat: no-repeat;
+}
+.Recipe:hover{
+    background-color: cornflowerblue;
+}
