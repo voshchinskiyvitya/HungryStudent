@@ -49,6 +49,9 @@ $RECYCLE.BIN/
 /compiled
 /site
 
+# Batch files
+/batch-files
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
