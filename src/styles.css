@@ -1,5 +1,29 @@
-.body{
+.body,
+html{
     overflow: hidden;
+}
+#start-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5bc0de;
+    z-index: 100;
+}
+#logo{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: cadetblue;
+    z-index: 100;
 }
 .header{
     position: fixed;
@@ -15,30 +39,50 @@
     top: 140px;
     left: 0;
     bottom: 0;
-    width: 200px;
+    width: 300px;
     background-color: darkgray;
 }
 .content{
     margin-top: 160px;
-    margin-left: 200px;
+    margin-left: 300px;
+    height: 100%;
+    overflow-y: auto;
 }
 .Recipe{
-    border: solid cadetblue;
-    border-color: aquamarine;
-    border-width: 3px;
-    background-color: beige;
+    border-left: 8px solid #5bc0de;
     margin: 25px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 20px;
+    transition: .5s;
+
+    background-color: gainsboro;
+    background: linear-gradient(to right, #6fdfdf, gainsboro 50%);
+    background-size: 200% 202%;
+    background-position: 100% 200%;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.Recipe .img{
+.Recipe:hover{
+    background-position: 0 100%;
+    border-left-color: #53b0d6;
+}
+.Recipe .title{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 15px;
+}
+.Recipe img{
+    float: left;
     height: 140px;
     width: 140px;
     border-radius: 100%;
-    border: 2px solid #50fa40;
-    background-size: 140px auto; <!-- choose heigth if more then width -->
+    border: 3px solid #428bca;
+    background-size: 140px auto;
     background-repeat: no-repeat;
 }
-.Recipe:hover{
-    background-color: cornflowerblue;
+.Recipe .description{
+    margin: 10px;
+    margin-left: 160px;
+    word-wrap: break-word;
 }

@@ -13,17 +13,18 @@ class RecipesLіst extends React.Component{
             data: []
         }
 
-        this.getData();
+        this.getRecipesData();
     }
 
 
-    getData(){
+    getRecipesData(){
         $.ajax({
             url: "data.txt"
-        }).done((result) => {
+        }).done(result => {
             this.state = {
                 data: JSON.parse(result)
             };
+
             this.forceUpdate();
         });
     }

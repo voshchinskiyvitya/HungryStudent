@@ -5,13 +5,11 @@ import React from 'react';
 
 class Recipe extends React.Component{
     render(){
-        let style = {backgroundImage: 'url(' + this.props.data.img + ')'};
-        
         return(
             <div className="Recipe">
-                <div>{this.props.data.title}</div>
-                <div className="img" style={style}></div>
-                <div>{this.props.data.description}</div>
+                <div className="title">{this.props.data.title}</div>
+                <img className="img-circle" src={this.props.data.img}/>
+                <div className="description">{this.props.data.description}</div>
             </div>
         );
     }
