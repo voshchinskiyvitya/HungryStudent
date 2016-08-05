@@ -19,7 +19,7 @@ class RecipesLіst extends React.Component{
 
     getRecipesData(){
         $.ajax({
-            url: "data.txt"
+            url: "http://localhost:80/index.php"
         }).done(result => {
             this.state = {
                 data: JSON.parse(result)
