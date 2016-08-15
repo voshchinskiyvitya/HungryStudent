@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 $servername = "localhost";
 $username = "HSClient";
@@ -36,6 +32,3 @@ $conn->close();
 echo json_encode($arr);
 ?>
 
-
-</body>
-</html>
