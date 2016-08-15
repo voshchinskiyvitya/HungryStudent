@@ -4,8 +4,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RecipeList from './RecipesList.js'
+import RecipesListView from './RecipesListView.js'
+import HungryStudentApp from './HungryStudentApp.js'
 
-ReactDOM.render(<RecipeList />, document.getElementById('content'));
+ReactDOM.render(<HungryStudentApp views={[RecipesListView]} />, document.getElementById('content'));
 
 
