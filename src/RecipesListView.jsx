@@ -9,6 +9,8 @@ class RecipesLіstView extends View{
     constructor(){
         super();
 
+        this.name = 'RecipesLіstView';
+
         this.state = {
             data: []
         }
