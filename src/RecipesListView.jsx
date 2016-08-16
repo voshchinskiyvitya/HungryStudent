@@ -9,6 +9,8 @@ class RecipesLіstView extends View{
     constructor(){
         super();
 
+        this.name = 'RecipesLіstView';
+
         this.state = {
             data: []
         }
@@ -19,7 +21,7 @@ class RecipesLіstView extends View{
 
     getRecipesData(){
         $.ajax({
-            url: "http://localhost:80/index.php"
+            url: "http://localhost:80/recipes.php"
         }).done(result => {
             this.state = {
                 data: JSON.parse(result)

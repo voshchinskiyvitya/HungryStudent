@@ -5,7 +5,7 @@ import React from 'react';
 
 class App extends React.Component {
     constructor(props){
-        super();
+        super(props);
 
         if(!!props.views){
             this.views = props.views;
