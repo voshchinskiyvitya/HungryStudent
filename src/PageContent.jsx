@@ -7,6 +7,6 @@ import ReactDOM from 'react-dom';
 import RecipesListView from './RecipesListView.js'
 import HungryStudentApp from './HungryStudentApp.js'
 
-ReactDOM.render(<HungryStudentApp views={[RecipesListView]} />, document.getElementById('content'));
+ReactDOM.render(<HungryStudentApp views={[<RecipesListView key={0}/>]} />, document.getElementById('content'));
 
 
