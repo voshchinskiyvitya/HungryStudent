@@ -6,11 +6,14 @@ import App from './App.js';
 
 class HungryStudentApp extends App{
 
+    constructor(props){
+        super(props);
+    }
 
     render(){
         return(
             <div>
-                =)
+                {this.props.views}
             </div>
         );
     }
