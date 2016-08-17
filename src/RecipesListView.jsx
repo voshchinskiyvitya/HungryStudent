@@ -2,6 +2,7 @@
  * Created by Вітя on 23.07.2016.
  */
 
+import React from 'react';
 import View from './View.js';
 import Recipe from './Recipe.js'
 
