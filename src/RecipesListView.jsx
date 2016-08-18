@@ -17,7 +17,13 @@ class RecipesLіstView extends View{
         this.getRecipesData();
     }
 
+    open(){
 
+    }
+
+    close(){
+
+    }
     getRecipesData(){
         $.ajax({
             url: "http://localhost:80/recipes.php"
