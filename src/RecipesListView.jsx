@@ -19,10 +19,9 @@ class RecipesLіstView extends View{
         this.getRecipesData();
     }
 
-
     getRecipesData(){
         $.ajax({
-            url: "http://localhost:80/recipes.php"
+            url: "http://fisherman.if.ua/recipes.php"
         }).done(result => {
             this.state = {
                 data: JSON.parse(result)
@@ -30,6 +29,10 @@ class RecipesLіstView extends View{
 
             this.forceUpdate();
         });
+    }
+
+    component(){
+        return component;
     }
 
     render(){
@@ -40,5 +43,7 @@ class RecipesLіstView extends View{
         );
     }
 }
+
+var component = (<RecipesListView />);
 
 export default RecipesLіstView;

@@ -13,7 +13,10 @@ class HungryStudentApp extends App{
     render(){
         return(
             <div>
-                {this.props.views}
+                <button onClick={this.switchToView.bind(this, 1)}>Switch</button>
+                <div>
+                    {this.currentView.component()}
+                </div>
             </div>
         );
     }

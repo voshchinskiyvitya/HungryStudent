@@ -5,8 +5,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RecipesListView from './RecipesListView.js'
+import ProductsView from './ProductsView'
 import HungryStudentApp from './HungryStudentApp.js'
 
-ReactDOM.render(<HungryStudentApp views={[<RecipesListView key={0}/>]} />, document.getElementById('content'));
+ReactDOM.render(<HungryStudentApp views={[new RecipesListView(),
+                                          new ProductsView({ products: [{name: 'potatoe'}]})]} />, document.getElementById('content'));
 
 
