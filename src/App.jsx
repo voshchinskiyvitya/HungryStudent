@@ -15,14 +15,14 @@ class App extends React.Component {
         }
     }
 
-    switchToView(viewName){
-        let view = this.views.find(view => view.name == viewName);
+    switchToView(viewIndex){
+        let view = this.views[viewIndex];
         if(!!view){
             this.currentView.close();
             this.currentView = view;
             this.currentView.open();
         } else {
-            throw Error("View " + viewName + "does not find.");
+            throw Error("View [" + viewIndex + "] does not find.");
         }
     }
 }
