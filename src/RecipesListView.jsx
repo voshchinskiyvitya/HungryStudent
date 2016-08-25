@@ -3,8 +3,8 @@
  */
 
 import React from 'react';
-import View from './View.js';
-import Recipe from './Recipe.js'
+import View from './View';
+import Recipe from './Recipe'
 
 class RecipesLіstView extends View{
     constructor(){
@@ -14,7 +14,7 @@ class RecipesLіstView extends View{
 
         this.state = {
             data: []
-        }
+        };
 
         this.getRecipesData();
     }

@@ -4,11 +4,11 @@
 import React from 'react';
 
 class App extends React.Component {
-    constructor(props){
+    constructor(props, views){
         super(props);
 
-        if(!!props.views){
-            this.views = props.views;
+        if(!!views){
+            this.views = views;
             this.currentView = this.views[0];
         } else {
             throw Error("View for app wasn't defined.");
