@@ -2,19 +2,30 @@
  * Created by User on 15.08.2016.
  */
 import React from 'react';
-import App from './App.js';
+import App from './App';
+import RecipesListView from './RecipesListView';
+import ProductsView from './ProductsView';
 
 class HungryStudentApp extends App{
 
     constructor(props){
-        super(props);
+        var views = [
+            new RecipesListView(),
+            new ProductsView({
+                products: [
+                    {name: 'potatoe'}
+                ]
+            })
+        ];
+
+        super(props, views);
     }
 
     render(){
         return(
             <div>
                 <button onClick={this.switchToView.bind(this, 1)}>Switch</button>
-                {this.currentView}
+                {this.currentView.render()}
             </div>
         );
     }

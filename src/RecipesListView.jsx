@@ -1,32 +1,27 @@
-/**
+﻿/**
  * Created by Вітя on 23.07.2016.
  */
 
 import React from 'react';
-import View from './View.js';
-import Recipe from './Recipe.js'
+import View from './View';
+import Recipe from './Recipe'
 
 class RecipesLіstView extends View{
     constructor(){
         super();
 
+        this.name = 'RecipesLіstView';
+
         this.state = {
             data: []
-        }
+        };
 
         this.getRecipesData();
     }
 
-    open(){
-
-    }
-
-    close(){
-
-    }
     getRecipesData(){
         $.ajax({
-            url: "http://localhost:80/recipes.php"
+            url: "http://fisherman.if.ua/recipes.php"
         }).done(result => {
             this.state = {
                 data: JSON.parse(result)

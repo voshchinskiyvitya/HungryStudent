@@ -2,14 +2,16 @@
  * Created by User on 16.08.2016.
  */
 
-import React from 'react';
 import View from './View';
+import React from 'react';
 
 class ProductsView extends View{
     constructor(props){
         super(props);
 
-        genericComponentClass();
+        this.name = 'ProductsView';
+
+        this.generateChildComponents();
     }
 
     generateChildComponents(){
@@ -26,13 +28,6 @@ class ProductsView extends View{
         this.forceUpdate();
     }
 
-    open(){
-
-    }
-
-    close(){
-
-    }
 
     render(){
         return(
