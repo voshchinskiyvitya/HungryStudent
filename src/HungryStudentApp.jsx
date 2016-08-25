@@ -14,9 +14,7 @@ class HungryStudentApp extends App{
         return(
             <div>
                 <button onClick={this.switchToView.bind(this, 1)}>Switch</button>
-                <div>
-                    {this.currentView.component()}
-                </div>
+                {this.currentView}
             </div>
         );
     }

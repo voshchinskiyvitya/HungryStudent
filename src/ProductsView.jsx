@@ -28,6 +28,7 @@ class ProductsView extends View{
         this.forceUpdate();
     }
 
+
     render(){
         return(
             <div>

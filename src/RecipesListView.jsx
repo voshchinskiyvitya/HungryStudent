@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Вітя on 23.07.2016.
  */
 
@@ -31,10 +31,6 @@ class RecipesLіstView extends View{
         });
     }
 
-    component(){
-        return component;
-    }
-
     render(){
         return(
             <div className="RecipesList">
@@ -43,7 +39,5 @@ class RecipesLіstView extends View{
         );
     }
 }
-
-var component = (<RecipesListView />);
 
 export default RecipesLіstView;
