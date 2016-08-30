@@ -19,6 +19,14 @@ class HungryStudentApp extends App{
         ];
 
         super(props, views);
+
+        var app = this;
+        
+        for(var i = 0; i < this.views.length; i++){
+            this.views[i].componentDidUpdate = function(){
+                app.forceUpdate();
+            }
+        }
     }
 
     render(){
