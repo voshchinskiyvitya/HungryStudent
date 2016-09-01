@@ -10,5 +10,3 @@ import HungryStudentApp from './HungryStudentApp'
 ReactDOM.render(<HungryStudentApp />, document.getElementById('content'));
 
 
-
-

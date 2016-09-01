@@ -2,7 +2,6 @@
  * Created by User on 16.08.2016.
  */
 
-
 import React from 'react';
 import View from './View';
 
