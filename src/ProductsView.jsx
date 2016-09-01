@@ -2,6 +2,7 @@
  * Created by User on 16.08.2016.
  */
 
+
 import React from 'react';
 import View from './View';
 
@@ -9,7 +10,9 @@ class ProductsView extends View{
     constructor(props){
         super(props);
 
-        genericComponentClass();
+        this.name = 'ProductsView';
+
+        this.generateChildComponents();
     }
 
     generateChildComponents(){
@@ -24,14 +27,6 @@ class ProductsView extends View{
         this.props.products.push(product);
         this.generateChildComponents();
         this.forceUpdate();
-    }
-
-    open(){
-
-    }
-
-    close(){
-
     }
 
     render(){
