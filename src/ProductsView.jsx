@@ -2,8 +2,8 @@
  * Created by User on 16.08.2016.
  */
 
-import View from './View';
 import React from 'react';
+import View from './View';
 
 class ProductsView extends View{
     constructor(props){
@@ -27,7 +27,6 @@ class ProductsView extends View{
         this.generateChildComponents();
         this.forceUpdate();
     }
-
 
     render(){
         return(
