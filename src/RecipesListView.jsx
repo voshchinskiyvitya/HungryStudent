@@ -7,8 +7,8 @@ import View from './View';
 import Recipe from './Recipe'
 
 class RecipesLіstView extends View{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.name = 'RecipesLіstView';
 
@@ -28,13 +28,17 @@ class RecipesLіstView extends View{
             };
 
             this.forceUpdate();
+            this.componentDidUpdate();
         });
     }
 
     render(){
         return(
-            <div className="RecipesList">
-                {this.state.data.map((rec, i) => <Recipe data={rec} key={i}/>)}
+            <div className="recipe-list">
+                <div className="product-view-switcher"></div>
+                <div className="RecipesList">
+                    {this.state.data.map((rec, i) => <Recipe data={rec} key={i}/>)}
+                </div>
             </div>
         );
     }
