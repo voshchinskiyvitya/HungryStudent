@@ -30,13 +30,14 @@ class ProductsView extends View{
 
     render(){
         return(
-            <div>
+            <div className="product-list">
                 <div>
                     {this.props.products}
                 </div>
                 <button>
                     Add
                 </button>
+                <div className="recipes-view-switcher"></div>
             </div>
         );
     }

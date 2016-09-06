@@ -33,8 +33,11 @@ class RecipesLіstView extends View{
 
     render(){
         return(
-            <div className="RecipesList">
-                {this.state.data.map((rec, i) => <Recipe data={rec} key={i}/>)}
+            <div className="recipe-list">
+                <div className="product-view-switcher"></div>
+                <div className="RecipesList">
+                    {this.state.data.map((rec, i) => <Recipe data={rec} key={i}/>)}
+                </div>
             </div>
         );
     }

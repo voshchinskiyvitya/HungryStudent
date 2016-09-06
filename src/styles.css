@@ -31,17 +31,8 @@
     width: auto;
     background-color: cornflowerblue;
 }
-.filter-panel{
-    position: fixed;
-    top: 140px;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    background-color: darkgray;
-}
 .content{
     margin-top: 160px;
-    margin-left: 300px;
     height: 100%;
     overflow-y: auto;
 }
@@ -82,4 +73,22 @@
     margin: 10px;
     margin-left: 160px;
     word-wrap: break-word;
+}
+.product-view-switcher{
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+    background-color: #2d6987;
+}
+
+.recipes-view-switcher{
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+    background-color: #2d6987;
+}
+
+.recipe-list,
+.product-list{
+    display: inline-block;
 }
