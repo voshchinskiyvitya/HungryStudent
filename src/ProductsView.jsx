@@ -15,8 +15,8 @@ class ProductsView extends View{
     }
 
     generateChildComponents(){
-        this.products = this.props.products.map((product) =>
-            <div>
+        this.products = this.props.products.map((product, i) =>
+            <div key={i}>
                 {product.name}
             </div>
         );
@@ -26,15 +26,16 @@ class ProductsView extends View{
         this.props.products.push(product);
         this.generateChildComponents();
         this.forceUpdate();
+        this.componentDidUpdate();
     }
 
     render(){
         return(
             <div className="product-list">
                 <div>
-                    {this.props.products}
+                    {this.products}
                 </div>
-                <button>
+                <button onClick={this.addNewProduct.bind(this, {name: "prod"})}>
                     Add
                 </button>
                 <div className="recipes-view-switcher"></div>

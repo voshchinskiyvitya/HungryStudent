@@ -7,8 +7,8 @@ import View from './View';
 import Recipe from './Recipe'
 
 class RecipesLіstView extends View{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.name = 'RecipesLіstView';
 
@@ -28,6 +28,7 @@ class RecipesLіstView extends View{
             };
 
             this.forceUpdate();
+            this.componentDidUpdate();
         });
     }
 
