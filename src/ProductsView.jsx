@@ -33,8 +33,8 @@ class ProductsView extends View{
     render(){
         return(
             <div className="product-list-view">
-                <div>
-                    <div className="product-list">
+                <div className="product-list">
+                    <div>
                         {this.products}
                     </div>
                     <button onClick={this.addNewProduct.bind(this, {name: "prod"})}>
