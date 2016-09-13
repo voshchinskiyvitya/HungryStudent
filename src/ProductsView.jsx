@@ -29,6 +29,7 @@ class ProductsView extends View{
         this.componentDidUpdate();
     }
 
+
     render(){
         return(
             <div className="product-list-view">
