@@ -31,14 +31,16 @@ class ProductsView extends View{
 
     render(){
         return(
-            <div className="product-list">
+            <div className="product-list-view">
                 <div>
-                    {this.products}
+                    <div className="product-list">
+                        {this.products}
+                    </div>
+                    <button onClick={this.addNewProduct.bind(this, {name: "prod"})}>
+                        Add
+                    </button>
                 </div>
-                <button onClick={this.addNewProduct.bind(this, {name: "prod"})}>
-                    Add
-                </button>
-                <div className="recipes-view-switcher"></div>
+                <div className="recipes-view-switcher" onClick={this.switch}></div>
             </div>
         );
     }
