@@ -40,17 +40,24 @@ $RECYCLE.BIN/
 .VolumeIcon.icns
 
 # Node modules
-/node_modules
+/JS/node_modules
 
 # WebStorm project dir
-/.idea
+/JS/.idea
 
 # Compiled files
-/compiled
-/site
+/JS/compiled
+/JS/site
 
 # Batch files
-/batch_files
+/JS/batch_files
+
+# Compiled files directory
+/bin
+/obj
+/Properties
+*.config
+*.csproj
 
 # Directories potentially created on remote AFP share
 .AppleDB
