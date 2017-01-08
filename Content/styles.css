@@ -1,0 +1,121 @@
+#start-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5bc0de;
+    z-index: 100;
+}
+#logo{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 175px;
+    height: 110px;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;	
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    width: auto;
+    background-color: cornflowerblue;
+}
+.content{
+    margin-top: 140px;
+    height: 100%;
+    overflow-y: auto;
+}
+.Recipe{
+    border-left: 8px solid #5bc0de;
+    margin: 25px;
+    padding: 20px;
+    transition: .5s;
+
+    background-color: gainsboro;
+    background: linear-gradient(to right, #6fdfdf, gainsboro 50%);
+    background-size: 200% 202%;
+    background-position: 100% 200%;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Recipe:hover{
+    background-position: 0 100%;
+    border-left-color: #53b0d6;
+}
+.Recipe .title{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 15px;
+}
+.Recipe img{
+    float: left;
+    height: 140px;
+    width: 140px;
+    border-radius: 100%;
+    border: 3px solid #428bca;
+    background-size: 140px auto;
+    background-repeat: no-repeat;
+}
+.Recipe .description{
+    margin: 10px;
+    margin-left: 160px;
+    word-wrap: break-word;
+}
+.product-view-switcher{
+    display: inline-block;
+    height: 1000px;
+    width: 100px;
+    background-color: #2d6987;
+}
+
+.recipes-view-switcher{
+    display: inline-block;
+    height: 1000px;
+    width: 10%;
+    background-color: #2d6987;
+}
+
+.recipe-list,
+.product-list{
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+}
+
+.auto-complete-input {
+    width: 175px;
+}
+
+.auto-complete-list{
+    position: absolute;
+    display: block;
+    z-index: 999;
+    background: #fff;
+    width: 175px;
+    border: 2px solid grey;
+    list-style: none;
+}
+
+.auto-complete-list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.auto-complete-list li:hover{
+    background: #5bc0de;
+}
+

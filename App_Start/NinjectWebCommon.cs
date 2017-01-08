@@ -1,4 +1,5 @@
-﻿using HungryStudent.DataAccess.Repositories;
+﻿using HungryStudent.DataAccess.Implementation.First.Repositories;
+using HungryStudent.DataAccess.Repositories;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(HungryStudent.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(HungryStudent.App_Start.NinjectWebCommon), "Stop")]
@@ -64,6 +65,7 @@ namespace HungryStudent.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IRecipesRepository>().To<RecipesRepository>().InSingletonScope();
+            kernel.Bind<IProductRepository>().To<ProductRepository>().InSingletonScope();
         }        
     }
 }
