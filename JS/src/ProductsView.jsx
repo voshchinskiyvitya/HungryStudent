@@ -4,12 +4,15 @@
 
 import View from './View';
 import React from 'react';
+import AutoComplete from './AutoComplete';
 
 class ProductsView extends View{
     constructor(props){
         super(props);
 
         this.name = 'ProductsView';
+
+        this.enteredProductName = '';
 
         this.generateChildComponents();
     }
@@ -29,19 +32,23 @@ class ProductsView extends View{
         this.componentDidUpdate();
     }
 
+    onInputTextChange(event) {
+        this.enteredProductName = event.target.value;
+        if (this.enteredProductName.length > 2) {
+            this.sentAutoCompleteRequest(event.target.value);
+        }
+    }
 
     render(){
         return(
             <div className="product-list-view">
+                <AutoComplete onItemSelect={this.addNewProduct.bind(this)} url="/Products/GetProducts" />
                 <div className="product-list">
                     <div>
                         {this.products}
                     </div>
-                    <button onClick={this.addNewProduct.bind(this, {name: "prod"})}>
-                        Add
-                    </button>
                 </div>
-                <div className="recipes-view-switcher" onClick={this.switch}></div>
+                <div className="recipes-view-switcher" onClick={this.switch.bind(this, this.props.products)}></div>
             </div>
         );
     }

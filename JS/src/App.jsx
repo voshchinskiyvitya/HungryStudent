@@ -15,12 +15,12 @@ class App extends React.Component {
         }
     }
 
-    switchToView(viewIndex){
+    switchToView(viewIndex, data){
         let view = this.views[viewIndex];
         if(!!view){
             this.currentView.close();
             this.currentView = view;
-            this.currentView.open();
+            this.currentView.open(data);
 
             this.forceUpdate();
         } else {

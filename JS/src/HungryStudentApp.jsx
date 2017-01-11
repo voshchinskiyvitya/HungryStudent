@@ -28,12 +28,12 @@ class HungryStudentApp extends App{
             };
         }
 
-        this.views.filter(v => v.name == "RecipesLіstView")[0].switch = function(){
-            app.switchToView(1);
+        this.views.filter(v => v.name == "RecipesLіstView")[0].switch = function(data){
+            app.switchToView(1, data);
         };
 
-        this.views.filter(v => v.name == "ProductsView")[0].switch = function(){
-            app.switchToView(0);
+        this.views.filter(v => v.name == "ProductsView")[0].switch = function(data){
+            app.switchToView(0, data);
         };
 
     }

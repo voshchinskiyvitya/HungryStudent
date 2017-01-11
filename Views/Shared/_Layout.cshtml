@@ -6,11 +6,11 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/Scripts/start-animation.js")
 </head>
 <body>
 <div class="container body-content">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/start-animation.js")
     @RenderBody()
 </div>
 

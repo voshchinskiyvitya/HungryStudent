@@ -19,17 +19,24 @@ class RecipesLіstView extends View{
         this.getRecipesData();
     }
 
-    getRecipesData(){
+    getRecipesData(data) {
+        var prodIds = !!data ? data.map(p => p.id).filter(id => !!id) : null;
         $.ajax({
-            url: "http://fisherman.if.ua/recipes.php"
+            url: "/Recipes/GetRecipes",
+            data: { productIds: prodIds },
+            traditional: true
         }).done(result => {
             this.state = {
-                data: JSON.parse(result)
+                data: result
             };
 
             this.forceUpdate();
             this.componentDidUpdate();
         });
+    }
+
+    open(data) {
+        this.getRecipesData(data);
     }
 
     render(){

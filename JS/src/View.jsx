@@ -1,7 +1,7 @@
 import React from 'react';
 
 class View extends React.Component {
-    open(){
+    open(data){
 
     }
 
